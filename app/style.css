@@ -1,0 +1,199 @@
+
+* {
+    font-family: 'Vazir', Tahoma, Arial, sans-serif !important;
+} 
+
+/* تنظیمات پایه برای زبان فارسی */
+@font-face {
+    font-family: 'Vazir';
+    src: url('fonts/vazir.ttf') format('truetype'); /* اگر فقط ttf داری */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #f4f6f8;
+    font-family: Vazir, Tahoma, Arial, sans-serif; /* اضافه شدن فونت‌های فارسی */
+    direction: rtl; /* جهت‌گیری راست به چپ */
+    text-align: right;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: right;
+}
+
+.task-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-card {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-card-title {
+    font-weight: bold;
+    color: #333;
+    flex-grow: 1;
+}
+
+.task-status {
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.status-pending {
+    background: #fdecea;
+    color: #c0392b;
+}
+
+.status-done {
+    background: #e8f8f0;
+    color: #239b56;
+}
+
+/* تنظیمات بهبودیافته فرم */
+.todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.todo-form input {
+    flex-grow: 1;
+    padding: 15px; /* افزایش فضای داخلی برای ارتفاع بیشتر */
+    font-size: 16px; /* بزرگتر کردن فونت برای خوانایی بهتر */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.todo-form input:focus {
+    border-color: #3498db; /* رنگ‌بندی هنگام کلیک */
+}
+
+.todo-form button {
+    padding: 0 25px;
+    font-size: 16px;
+    background: #239b56;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.todo-form button:hover {
+    background: #1e8449;
+}
+
+/* استایل باکس پیام‌ها */
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* کانتینر جدید برای وضعیت و دکمه‌ها */
+.task-meta {
+    display: flex;
+    align-items: center; /* تراز عمودی دکمه‌ها و متن وضعیت */
+    gap: 15px; /* فاصله بین دکمه‌ها و وضعیت */
+}
+
+/* فاصله بین خود دکمه‌های عملیاتی */
+.task-actions {
+    display: flex;
+    gap: 8px; /* فاصله دکمه حذف و تغییر وضعیت */
+}
+
+/* اصلاح استایل دکمه‌ها برای یکدستی */
+.btn-toggle, .btn-delete {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-toggle {
+    background: #3498db;
+    color: white;
+}
+
+.btn-toggle:hover { background: #2980b9; }
+
+.btn-delete {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-delete:hover { background: #c0392b; }
+
+/* اعمال اجباری فونت بر روی المنت‌های فرم */
+/* input, button, textarea, select {
+    font-family: 'Vazir', Tahoma, Arial, sans-serif !important;
+} */
+
+.filter-buttons {
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+.filter-buttons a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px){
+
+    .task-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
